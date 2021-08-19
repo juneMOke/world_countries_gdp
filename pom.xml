@@ -12,6 +12,12 @@
         <lombok.version>1.18.20</lombok.version>
         <junit.version>4.13.2</junit.version>
         <hibernate-validator.version>7.0.1.Final</hibernate-validator.version>
+        <mysql-connector-java.version>8.0.25</mysql-connector-java.version>
+        <spring-core.version>${spring-context.version}</spring-core.version>
+        <spring-jdbc.version>${spring-context.version}</spring-jdbc.version>
+        <spring-beans.version>${spring-context.version}</spring-beans.version>
+        <spring-context.version>5.3.9</spring-context.version>
+        <HikariCP.version>5.0.0</HikariCP.version>
     </properties>
     <dependencies>
         <dependency>
@@ -30,6 +36,42 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate-validator.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring-jdbc.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring-beans.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${HikariCP.version}</version>
             <scope>compile</scope>
         </dependency>
 
