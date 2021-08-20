@@ -17,7 +17,10 @@
         <spring-jdbc.version>${spring-context.version}</spring-jdbc.version>
         <spring-beans.version>${spring-context.version}</spring-beans.version>
         <spring-context.version>5.3.9</spring-context.version>
+        <spring-test.version>${spring-context.version}</spring-test.version>
         <HikariCP.version>5.0.0</HikariCP.version>
+        <h2.version>1.4.200</h2.version>
+        <assertj-core.version>3.20.2</assertj-core.version>
     </properties>
     <dependencies>
         <dependency>
@@ -72,6 +75,24 @@
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>${HikariCP.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring-test.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
             <scope>compile</scope>
         </dependency>
 
