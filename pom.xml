@@ -17,15 +17,19 @@
         <spring-jdbc.version>${spring-context.version}</spring-jdbc.version>
         <spring-beans.version>${spring-context.version}</spring-beans.version>
         <spring-context.version>5.3.9</spring-context.version>
+        <spring-test.version>${spring-context.version}</spring-test.version>
         <HikariCP.version>5.0.0</HikariCP.version>
+        <h2.version>1.4.200</h2.version>
+        <assertj-core.version>3.20.2</assertj-core.version>
+        <junit-platform-engine.version>${junit-platform-launcher.version}</junit-platform-engine.version>
+        <junit-platform-launcher.version>1.7.2</junit-platform-launcher.version>
+        <junit-vintage-engine.version>5.7.2</junit-vintage-engine.version>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <slf4j-api.version>${slf4j-jdk14.version}</slf4j-api.version>
+        <slf4j-jdk14.version>1.7.32</slf4j-jdk14.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -38,6 +42,7 @@
             <version>${hibernate-validator.version}</version>
             <scope>compile</scope>
         </dependency>
+        <!--        Database -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -73,6 +78,73 @@
             <artifactId>HikariCP</artifactId>
             <version>${HikariCP.version}</version>
             <scope>compile</scope>
+        </dependency>
+        <!--        Test dependencies-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring-test.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>${junit-platform-launcher.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-vintage-engine.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-engine</artifactId>
+            <version>${junit-platform-engine.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-vintage-engine.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit-vintage-engine.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <scope>compile</scope>
+            <version>${slf4j-jdk14.version}</version>
         </dependency>
 
     </dependencies>

@@ -25,6 +25,9 @@ public class City {
     @Size(max = 20)
     private String district;
 
+
+    private String countryCode;
+
     @NotNull
     private Long population;
 }
