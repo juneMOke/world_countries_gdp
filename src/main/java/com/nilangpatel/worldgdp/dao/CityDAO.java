@@ -2,12 +2,14 @@ package com.nilangpatel.worldgdp.dao;
 
 import com.nilangpatel.worldgdp.dao.mapper.CityMapper;
 import com.nilangpatel.worldgdp.model.City;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,6 +17,8 @@ import java.util.Map;
 
 import static com.nilangpatel.worldgdp.dao.CountryDAO.PAGE_SIZE;
 
+@Service
+@Setter
 public class CityDAO {
     final String SELECT = "SELECT id, "
             + " name, countrycode country_code, "
