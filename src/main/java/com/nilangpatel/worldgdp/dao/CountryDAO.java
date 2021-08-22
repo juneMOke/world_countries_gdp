@@ -38,7 +38,7 @@ public class CountryDAO {
     private static final String CONTINENT_WHERE_CLAUSE = " AND c.continent = :continent ";
     private static final String REGION_WHERE_CLAUSE = " AND c.region = :region ";
     private static final String PAGINATION_CLAUSE = " ORDER BY c.code " + " LIMIT :size OFFSET :offset ";
-    private static final Integer PAGE_SIZE = 20;
+    public static final Integer PAGE_SIZE = 20;
     @Autowired
     NamedParameterJdbcTemplate namedParamJdbcTemplate;
 
