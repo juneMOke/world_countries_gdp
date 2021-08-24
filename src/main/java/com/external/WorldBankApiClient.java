@@ -1,6 +1,7 @@
 package com.external;
 
 import com.nilangpatel.worldgdp.model.CountryGDP;
+import lombok.Setter;
 import lombok.SneakyThrows;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Setter
 public class WorldBankApiClient {
     String GDP_URL = "http://api.worldbank.org/countries/%s/indicators/NY.GDP.MKTP.CD?" + "format=json&date=2017:2020";
     WebClient client = WebClient.create();
